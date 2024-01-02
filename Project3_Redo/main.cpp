@@ -22,7 +22,7 @@ void lower(string &myString);
 //2) Comment the next 2 lines below
 int main(void) {
 
-    string inputFileName = "input4.txt";    //Do NOT change the name "inputFileName" since used above
+    string inputFileName = "input1.txt";    //Do NOT change the name "inputFileName" since used above
 
     //file handling
     ifstream inFS;
@@ -71,14 +71,8 @@ int main(void) {
         //accountGraph.GetAccountFromName(column2)
 
     }
-    //For debugging, comment/uncomment as needed
-    //accountGraph.GetAccountFromName("spacex")->PrintFollowers();
-    //accountGraph.PrintAccounts();
     
-    cout << "The root user is " << accountGraph.GetRoot()->GetName() << ", with in-degree centrality of " << accountGraph.GetRoot()->GetNumFollowers() << ".\n";
-
-    //accountGraph.BFS();
-    //accountGraph.PrintSN();
+    accountGraph.PrintSN();
 
     return 0;
 }

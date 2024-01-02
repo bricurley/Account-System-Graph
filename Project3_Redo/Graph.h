@@ -3,7 +3,6 @@
 #define GRAPH_H
 #include <iostream>
 #include <string>
-#include <vector>
 #include <set>
 #include <list>
 #include "Project3a.h"
@@ -13,7 +12,6 @@ class Graph {
     private:
         //node storage
         list<Account*> myaccounts;
-        //vector<Account> inSN;
         Account *root;
     public:
         Graph();
@@ -22,11 +20,9 @@ class Graph {
         void AddAccount(string newAccount);
         Account* GetAccountFromName(string account);
         void PrintAccounts();
-        void SetRoot();
         void UpdateRoot(Account* newAccount);
         Account* GetRoot();
-        //populate social network
-        void BFS();
+        //identify all accounts within depth 2
         void PrintSN();
 };
 
