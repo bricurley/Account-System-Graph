@@ -12,16 +12,23 @@ with each list of followers in alphabetical order.
 The code consists of two major classes, an account class and a graph class.
 The account class contains the distance to the root account (depth), the
 account's name, and two vectors each of type Account* , one to store the
-account's followers, and the other to store accounts it is following. The
-graph class contains a vector of type Account* to store the accounts
+account's followers, and the other to store accounts it is following. It
+has member functions to check if an account has already been added to the
+followers/following and add a follower or following, and sort the vector
+of followers using insertion sort. The graph class contains a vector of type
+Account* to store the accounts, another Account pointer to store the root,
+and a vector of type Account to store a list of accounts within depth 2.
+It has member functions to check if an account had been added, to return an
+existing account given a string name, to set the root, to populate the
+vector of accounts of depth 2, and another to print them.
 
 # Noteable Differences in Second Implementation
 
-•   Sets of type string are used to store followers and following in the
+<li>Sets of type string are used to store followers and following in the
     account class. This prevents duplicates and is ordered, so there is no
     need to iterate through each to check if the element being inserted is
     already present. Also, nothing additional needs to be done to print
-    the followers in alphabetical order since this is already done by the set.
+    the followers in alphabetical order since this is already done by the set.</li>
 
 •   Lists of type Account* are used in the graph class to store each account.
     Accounts are inserted in alphabetical order as they are added, and duplicates
@@ -37,4 +44,10 @@ graph class contains a vector of type Account* to store the accounts
     check if the account that gained a follower now has more followers than the
     current root. If it does, the root is updated. This avoids the need to search
     the list of accounts again after they have all been read from the input file.
+
+•   Root distance data member was removed from Account class, accounts within
+    depth 2 vector was removed from Graph class. Some accounts have two different
+    depths from the root. Also, there is no need to go through the same list twice,
+    so the accounts within depth 2 are printed as the followers of the root are
+    transversed. This both saves memory and improves runtime.
     
