@@ -1,6 +1,6 @@
-# ignore ALL .log files
+# ignore cmake files
 CMakeLists.txt
 
-# ignore build and vscode folders
-build/
-vscode/
+# ignore build and vscode folders, and their contents
+**/build/
+**/vscode/
