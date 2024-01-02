@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bcurley/Desktop/ECE275/Project 3 copy
+# Install script for directory: /Users/bcurley/Desktop/Account-System-Graph/Project3_copy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/bcurley/Desktop/ECE275/Project 3 copy/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

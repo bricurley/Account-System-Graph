@@ -12,17 +12,18 @@ using namespace std;
 class Graph {
     private:
         //node storage
-        list<Account> myaccounts;
+        list<Account*> myaccounts;
         //vector<Account> inSN;
-        Account root;
+        Account *root;
     public:
         Graph();
         //adding accounts
         //bool AccountAdded(string newAccount);
         void AddAccount(string newAccount);
-        Account GetAccountFromName(string account);
+        Account* GetAccountFromName(string account);
         void PrintAccounts();
         void SetRoot();
+        void UpdateRoot(Account* newAccount);
         Account* GetRoot();
         //populate social network
         void BFS();

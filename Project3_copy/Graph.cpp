@@ -4,45 +4,55 @@ using namespace std;
 
 
 Graph::Graph() {
-    //root = NULL;
+    root = NULL;
 }
 
 void Graph::AddAccount(string newAccount) {
     bool added = false;
     Account temp;
-    list<Account>::iterator i = myaccounts.begin();
+    list<Account*>::iterator i = myaccounts.begin();
     if (myaccounts.size() == 0) {
         //temp = new Account(newAccount);
-        myaccounts.push_back(Account(newAccount));
+        myaccounts.push_back(new Account(newAccount));
+        return;
     }
+    //if new account should be last in the list
+    else if ((myaccounts.back())->GetName() < newAccount){
+        myaccounts.push_back(new Account(newAccount));
+        return;
+    }
+    //find account's place in the list
     else {
-        while(i != myaccounts.end() || i->GetName() < newAccount) {
-            //cout << (*i)->GetName() << endl;
+        while(i != myaccounts.end()) {
             //if account was already added
-            if (i->GetName() == newAccount) {
+            if ((*i)->GetName() == newAccount) {
                 added = true;
                 break;
             }
+            if ((*i)->GetName() > newAccount) {
+                break;
+            }
             ++i;
-        }
+        }        
         if (!added) {
-            myaccounts.insert(i, Account(newAccount));
+            myaccounts.insert(i, new Account(newAccount));
         }
     }
 }
 
-Account Graph::GetAccountFromName(string account) {
-    Account temp;
-    list<Account>::iterator i;
+Account* Graph::GetAccountFromName(string account) {
+    Account* temp;
+    list<Account*>::iterator i;
     for (i = myaccounts.begin(); i != myaccounts.end(); ++i) {
-        if (i->GetName() == account) {
+        if ((*i)->GetName() == account) {
             temp = *i;
             break;
         }
     }
     return temp;
 }
-/*
+
+
 void Graph::PrintAccounts() {
     cout << "ACCOUNTS:" << endl;
     list<Account*>::iterator i;
@@ -52,27 +62,44 @@ void Graph::PrintAccounts() {
 }
 
 void Graph::SetRoot() {
-    Account *temp = myaccounts.at(0);
-    for (unsigned int i = 1; i < myaccounts.size(); ++i) {
+    Account* temp = myaccounts.front();
+    list<Account*>::iterator i = myaccounts.begin();
+    while(i != myaccounts.end()) {
         //check if equal number of followers
-        if (myaccounts.at(i)->GetNumFollowers() > temp->GetNumFollowers()) {
-            temp = myaccounts.at(i);
+        if ((*i)->GetNumFollowers() > temp->GetNumFollowers()) {
+            temp = *i;
         }
         //check if equal
-        else if (myaccounts.at(i)->GetNumFollowers() == temp->GetNumFollowers()) {
+        else if ((*i)->GetNumFollowers() == temp->GetNumFollowers()) {
             //TODO sort alphabetically
-            if (myaccounts.at(i)->GetName() < temp->GetName()) {
-                temp = myaccounts.at(i);
+            if ((*i)->GetName() < temp->GetName()) {
+                temp = *i;
             }
         }
+        ++i;
     }
     root = temp;
+}
+
+void Graph::UpdateRoot(Account* newAccount) {
+    if (root == NULL) {
+        root = newAccount;
+    }
+    else if (newAccount->GetNumFollowers() > root->GetNumFollowers()) {
+        root = newAccount;
+    }
+    //break tie using alphabet
+    else if (newAccount->GetNumFollowers() == root->GetNumFollowers()) {
+        if (newAccount->GetName() < root->GetName()) {
+            root = newAccount;
+        }
+    }       
 }
 
 Account* Graph::GetRoot() {
     return root;
 }
-
+/*
 //populate in social network
 void Graph::BFS() {
     //visit all nodes within depth 1 of the root

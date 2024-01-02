@@ -22,7 +22,7 @@ void lower(string &myString);
 //2) Comment the next 2 lines below
 int main(void) {
 
-    string inputFileName = "input3.txt";    //Do NOT change the name "inputFileName" since used above
+    string inputFileName = "input4.txt";    //Do NOT change the name "inputFileName" since used above
 
     //file handling
     ifstream inFS;
@@ -79,12 +79,11 @@ int main(void) {
     //cout << accountGraph.GetRoot()->GetRootDist();
 
     accountGraph.BFS();
+    cout << "Testing with input file: " << inputFileName << endl;
     accountGraph.PrintSN();
 
     return 0;
 }
-
-//DON'T FORGET TO DELETE THE ALLOCATED MEMORY!!!!!!!!!!
 
 void lower(string &myString) {
     for (unsigned int i = 0; i < myString.length(); ++i) {

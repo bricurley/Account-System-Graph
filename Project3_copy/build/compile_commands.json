@@ -1,20 +1,20 @@
 [
 {
-  "directory": "/Users/bcurley/Desktop/ECE275/Project 3 copy/build",
-  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/main.cpp.o -c \"/Users/bcurley/Desktop/ECE275/Project 3 copy/main.cpp\"",
-  "file": "/Users/bcurley/Desktop/ECE275/Project 3 copy/main.cpp",
+  "directory": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/main.cpp.o -c /Users/bcurley/Desktop/Account-System-Graph/Project3_copy/main.cpp",
+  "file": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/main.cpp",
   "output": "CMakeFiles/project3_rework.dir/main.cpp.o"
 },
 {
-  "directory": "/Users/bcurley/Desktop/ECE275/Project 3 copy/build",
-  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/Project3a.cpp.o -c \"/Users/bcurley/Desktop/ECE275/Project 3 copy/Project3a.cpp\"",
-  "file": "/Users/bcurley/Desktop/ECE275/Project 3 copy/Project3a.cpp",
+  "directory": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/Project3a.cpp.o -c /Users/bcurley/Desktop/Account-System-Graph/Project3_copy/Project3a.cpp",
+  "file": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/Project3a.cpp",
   "output": "CMakeFiles/project3_rework.dir/Project3a.cpp.o"
 },
 {
-  "directory": "/Users/bcurley/Desktop/ECE275/Project 3 copy/build",
-  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/Graph.cpp.o -c \"/Users/bcurley/Desktop/ECE275/Project 3 copy/Graph.cpp\"",
-  "file": "/Users/bcurley/Desktop/ECE275/Project 3 copy/Graph.cpp",
+  "directory": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/project3_rework.dir/Graph.cpp.o -c /Users/bcurley/Desktop/Account-System-Graph/Project3_copy/Graph.cpp",
+  "file": "/Users/bcurley/Desktop/Account-System-Graph/Project3_copy/Graph.cpp",
   "output": "CMakeFiles/project3_rework.dir/Graph.cpp.o"
 }
 ]
