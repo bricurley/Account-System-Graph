@@ -58,7 +58,6 @@ vector of accounts of depth 2, and another to print them.
 
 (Not including reading from the input file)<br>
 <strong>Adding account to graph in both versions:</strong> O(N)<br>
-
 <strong>Searching for an account from a name in both versions:</strong> O(N)
 <strong>Inserting a follower/following account:</strong> O(N) using vectors
 in first version to check for a duplicate, O(1) using a set<br>
