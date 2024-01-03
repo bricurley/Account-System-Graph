@@ -58,12 +58,12 @@ vector of accounts of depth 2, and another to print them.
 
 (Not including reading from the input file)<br>
 <strong>Adding account to graph in both versions:</strong> O(N)<br>
-<strong>Searching for an account from a name in both versions:</strong> O(N)
+<strong>Searching for an account from a name in both versions:</strong> O(N)<br>
 <strong>Inserting a follower/following account:</strong> O(N) using vectors
 in first version to check for a duplicate, O(1) using a set<br>
 <strong>Sorting followers:</strong> O(N<sup>2</sup>) using insertion sort to order
 a vector, O(1) using a set<br>
 <strong>Finding the root account:</strong> O(N) in original to set the root after file has been
 fully read, O(1) to update the root as a follower to an account is added<br>
-<strong>Printing accounts within depth 2:</strong>Second version only needs to iterate,
+<strong>Printing accounts within depth 2: </strong>Second version only needs to iterate,
 only printing rather than populating a vector and then printing the vector<br>
