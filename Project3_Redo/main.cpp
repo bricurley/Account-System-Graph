@@ -22,7 +22,11 @@ void lower(string &myString);
 //2) Comment the next 2 lines below
 int main(void) {
 
-    string inputFileName = "input1.txt";    //Do NOT change the name "inputFileName" since used above
+    string inputFileName;
+
+    cout << "Enter the name of the input file: " << endl;
+
+    cin >> inputFileName;
 
     //file handling
     ifstream inFS;
